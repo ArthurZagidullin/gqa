@@ -1,0 +1,41 @@
+{
+  "generators": [
+    {
+      "timeout_s":                30,
+      "send_period_s":            1,
+      "data_sources": [
+        {
+          "id":               "data_1",
+          "init_value":       50,
+          "max_change_step":  5
+        },
+        {
+          "id":               "vata_2",
+          "init_value":       1,
+          "max_change_step":  10
+        }
+      ]
+    },
+    {
+      "timeout_s":                30,
+      "send_period_s":            2,
+      "data_sources": [
+        {
+          "id":               "Karina",
+          "init_value":       50,
+          "max_change_step":  5
+        }
+      ]
+    }
+  ],
+  "agregators": [
+    {
+    "sub_ids":                  ["data_1"],
+    "agregate_period_s":        10
+    }
+  ],
+  "queue": {
+    "size":                         50
+  },
+  "storage_type":                    1
+}
